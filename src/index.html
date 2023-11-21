@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/fabric"></script>
+    <title>Meme Generate</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="first-side">
+        <div class="input-container">
+          <input type="file" id="imageInput" accept="image/*" />
+          <input id="topText" placeholder="Введите текст" />
+          <input id="bottomText" placeholder="Введите текст" />
+
+          <label for="textColor">Text Color:</label>
+          <select id="textColor">
+            <option value="green">Зеленый</option>
+            <option value="red">Красный</option>
+            <option value="black">Черный</option>
+            <option value="white">Белый</option>
+            <option value="blue">Синий</option>
+          </select>
+          <label for="fontSize">Font Size:</label>
+          <input type="number" id="fontSize" value="20" min="1" />
+        </div>
+        <button id="generateBtn">Создать мем</button>
+      </div>
+      <div class="second-side">
+        <canvas id="memeCanvas" width="400" height="400"></canvas>
+        <a id="downloadLink" download="meme.png" href="#">
+          <button style="margin-top: 10px">Сохранить</button>
+        </a>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
